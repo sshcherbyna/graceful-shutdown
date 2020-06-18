@@ -78,7 +78,7 @@ public class DemoApplication {
                     threadPoolExecutor.shutdown();
                     if (!threadPoolExecutor.awaitTermination(120, TimeUnit.SECONDS)) {
                         log.warn("Tomcat thread pool did not shut down gracefully within "
-                                + "30 seconds. Proceeding with forceful shutdown");
+                                + "120 seconds. Proceeding with forceful shutdown");
                     }
                 } catch (InterruptedException ex) {
                     Thread.currentThread().interrupt();
